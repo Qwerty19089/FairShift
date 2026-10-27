@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FairShift – Employer dashboard</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="topbar">
+    <div>
+      <div class="brand">⚖️ FairShift · <span data-i18n="a_title">Employer dashboard</span></div>
+      <div class="who" id="who"></div>
+    </div>
+    <div class="actions">
+      <label for="lang" class="sr-only" data-i18n="language">Language</label>
+      <select id="lang" class="compact"></select>
+      <button class="ghost" id="logout" data-i18n="logout">Log out</button>
+    </div>
+  </header>
+
+  <main id="main" class="wrap wide">
+    <div class="card row between">
+      <div class="row">
+        <label for="sector" class="nm" data-i18n="a_sector">Sector</label>
+        <select id="sector" class="compact"></select>
+      </div>
+      <span class="muted small" id="updated"></span>
+    </div>
+
+    <section aria-label="Key numbers"><div class="grid kpis" id="kpis"></div></section>
+
+    <div class="layout-2 mt">
+      <section class="card" aria-labelledby="att-h">
+        <h2 id="att-h" data-i18n="a_attendance">Attendance, last 14 days</h2>
+        <div id="attendance"></div>
+      </section>
+      <section class="card" aria-labelledby="fb-h">
+        <h2 id="fb-h" data-i18n="a_feedback">Anonymous feedback by site</h2>
+        <div id="feedback"></div>
+      </section>
+    </div>
+
+    <section class="card" aria-labelledby="ppl-h">
+      <h2 id="ppl-h" data-i18n="a_people">People who need attention</h2>
+      <p class="muted small" data-i18n="a_people_note"></p>
+      <div class="table-wrap" id="people"></div>
+    </section>
+
+    <section class="card" aria-labelledby="rep-h">
+      <h2 id="rep-h" data-i18n="a_reports">Safety reports</h2>
+      <div class="table-wrap" id="reports"></div>
+    </section>
+
+    <div class="layout-2">
+      <section class="card" aria-labelledby="pp-h">
+        <h2 id="pp-h" data-i18n="a_passport">Skill passport</h2>
+        <div class="field"><label for="pp-worker" data-i18n="a_pick_worker">Worker</label><select id="pp-worker"></select></div>
+        <div id="pp-list"></div>
+        <form id="pp-form">
+          <h3 data-i18n="a_issue">Issue verified credential</h3>
+          <div class="field"><label for="c-title" data-i18n="skill_name">Skill / training</label><input id="c-title" required maxlength="80"></div>
+          <div class="field"><label for="c-issuer" data-i18n="issuer">Given by</label><input id="c-issuer" maxlength="80"></div>
+          <div class="grid two">
+            <div class="field"><label for="c-date" data-i18n="date_obtained">Date obtained</label><input id="c-date" type="date" required></div>
+            <div class="field"><label for="c-exp" data-i18n="a_expires">Expiry date (optional)</label><input id="c-exp" type="date"></div>
+          </div>
+          <button type="submit" data-i18n="save">Save</button>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="qr-h">
+        <h2 id="qr-h" data-i18n="a_qr">Site check-in QR codes</h2>
+        <div class="qr-grid" id="qr-sites"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/js/i18n.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

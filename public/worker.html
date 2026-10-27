@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FairShift – Worker</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <a class="skip" href="#view" data-i18n="skip">Skip to content</a>
+  <header class="topbar">
+    <div>
+      <div class="brand">⚖️ FairShift</div>
+      <div class="who" id="who"></div>
+    </div>
+    <div class="actions">
+      <label for="lang" class="sr-only" data-i18n="language">Language</label>
+      <select id="lang" class="compact"></select>
+      <button class="ghost" id="logout" data-i18n="logout">Log out</button>
+    </div>
+  </header>
+
+  <main id="view" class="wrap" tabindex="-1" role="tabpanel" aria-live="polite"></main>
+
+  <nav class="tabbar" role="tablist" aria-label="FairShift" id="tabs">
+    <button role="tab" data-tab="shift"><span class="ico" aria-hidden="true">⏱️</span><span data-i18n="tab_shift">Shift</span></button>
+    <button role="tab" data-tab="pay"><span class="ico" aria-hidden="true">💰</span><span data-i18n="tab_pay">Pay</span></button>
+    <button role="tab" data-tab="safety"><span class="ico" aria-hidden="true">🦺</span><span data-i18n="tab_safety">Safety</span></button>
+    <button role="tab" data-tab="feedback"><span class="ico" aria-hidden="true">💬</span><span data-i18n="tab_feedback">Feedback</span></button>
+    <button role="tab" data-tab="passport"><span class="ico" aria-hidden="true">🎓</span><span data-i18n="tab_passport">Skills</span></button>
+  </nav>
+
+  <script src="/js/i18n.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/worker.js"></script>
+</body>
+</html>

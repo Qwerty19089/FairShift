@@ -1,0 +1,17 @@
+{
+  "name": "fairshift",
+  "version": "1.0.0",
+  "description": "FairShift - a decent-work platform for shift workers and employers (UN SDG 8)",
+  "main": "server.js",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.22.0",
+    "qrcode-generator": "^2.0.4"
+  }
+}

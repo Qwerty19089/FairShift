@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FairShift: fair pay, safety reporting and honest feedback for shift workers and employers.">
+  <title>FairShift – Decent work for everyone</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="topbar">
+    <span class="brand">⚖️ FairShift</span>
+    <div class="actions">
+      <label for="lang" class="sr-only" data-i18n="language">Language</label>
+      <select id="lang" class="compact"></select>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <h1 data-i18n="tagline">Fairer, safer, more transparent workplaces.</h1>
+
+    <section class="card" aria-labelledby="login-h">
+      <h2 id="login-h" data-i18n="login_title">Sign in</h2>
+      <form id="login-form" autocomplete="off">
+        <div class="field">
+          <label for="uid" data-i18n="id_label">Employee ID</label>
+          <input id="uid" name="uid" required maxlength="10" autocapitalize="characters" placeholder="W001">
+        </div>
+        <div class="field">
+          <label for="pin" data-i18n="pin_label">PIN</label>
+          <input id="pin" name="pin" type="password" inputmode="numeric" required maxlength="12" autocomplete="current-password">
+        </div>
+        <p id="login-error" class="alert critical" role="alert" hidden></p>
+        <button class="big" type="submit" data-i18n="sign_in">Sign in</button>
+      </form>
+    </section>
+
+    <section class="card" id="demo" aria-labelledby="demo-h" hidden>
+      <h2 id="demo-h" data-i18n="demo_title">Try the demo</h2>
+      <div class="field">
+        <label for="demo-worker" data-i18n="pick_worker">Choose a demo worker</label>
+        <select id="demo-worker"></select>
+      </div>
+      <div class="grid two">
+        <button id="demo-worker-btn" type="button" data-i18n="demo_worker">Worker view</button>
+        <button id="demo-admin-btn" type="button" class="secondary" data-i18n="demo_employer">Employer view</button>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="track-h">
+      <h2 id="track-h" data-i18n="track_title">Track a report</h2>
+      <p class="muted small">No login needed. Your name is never attached to anonymous reports.</p>
+      <form id="track-form" class="row" autocomplete="off">
+        <div class="grow">
+          <label for="track-code" class="sr-only" data-i18n="enter_track">Tracking code</label>
+          <input id="track-code" maxlength="12" autocapitalize="characters" placeholder="SAF-XXXXX" data-i18n-placeholder="enter_track">
+        </div>
+        <button type="submit" class="secondary" data-i18n="track">Check status</button>
+      </form>
+      <div id="track-result" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="/js/i18n.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>
